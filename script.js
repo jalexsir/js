@@ -1,18 +1,24 @@
 'use strict';
-var leftBorderWidth = 1;
-let second = 2;
-const pi = 3.12;
-let person = {
-    name: "John",
-    age: 25,
-    isMarried: false
+let money = prompt("Ваш бюджет на месяц?");
+let time = prompt("Введите дату в формате YYYY-MM-DD");
+
+let appData = {
+    budget: money,
+    timeData: time,
+    expenses: {},
+    optionalExpenses: {},
+    income: [],
+    saving: false
 }
-console.log(person.age);
-//alert('Hello world');
-let answer = confirm("Are you here?");
-console.log(answer);
-let secondAnswer = prompt("Есть ли Вам 18?", "Да");
-//console.log(secondAnswer);
-console.log("Type =" + typeof(secondAnswer));
-console.log("2" === 2);
-console.log("Hi");
+
+let question1 = prompt("Введите обязательную статью расходов в этом месяце");
+let question2 = prompt("Во сколько обойдется?");
+
+appData.expenses.question1 = question2;
+
+let question3 = prompt("Введите обязательную статью расходов в этом месяце");
+let question4 = prompt("Во сколько обойдется?");
+
+appData.expenses.question3 = question4;
+
+alert(appData.budget/30);
